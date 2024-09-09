@@ -11,6 +11,7 @@ app.use(express.json()); //used to convert string into json
 app.use(cors()); //allow any url to call this API
 
 connectDB();
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
 app.use("/jobs", jobsRouter);
 app.use("/jobApplications", jobApplicationsRouter);
